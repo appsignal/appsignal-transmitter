@@ -3,5 +3,10 @@ name = "appsignal-transmitter"
 version = "0.1.0"
 edition = "2021"
 
+[features]
+default = ["rustls-tls"]
+rustls-tls = ["reqwest/rustls-tls"]
+json = ["reqwest/json"]
+
 [dependencies]
-reqwest = { version = "0.12", default-features = false, features = ["rustls-tls"] }
+reqwest = { version = "0.12", default-features = false }
